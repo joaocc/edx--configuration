@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
-
-root_dir=$1
-shift
-environment_deployments=$@
+# This file should be sourced
+# The 'root_dir' and 'environment_deployments' variables
+# should be set when we source this.
 
 for e_d in $environment_deployments
 do
