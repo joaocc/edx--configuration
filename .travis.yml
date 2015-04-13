@@ -51,3 +51,6 @@ script:
 
     ansible-playbook -i localhost, --syntax-check travis-test.yml
 
+    mkdir test_output
+    ansible-playbook -i localhost, --tags edxapp_cfg edxapp.yml -e edxapp_user=`whoami` -e edxapp_app_dir=`pwd`/test_output -e edxapp_code_dir=`pwd`/test_output -e EDXAPP_CFG_DIR=`pwd`/test_output
+
